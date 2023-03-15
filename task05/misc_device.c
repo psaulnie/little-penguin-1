@@ -4,31 +4,38 @@
 #include <linux/init.h>
 #include <linux/miscdevice.h>
 
-// #define DEVICE_NAME "fortytwo"
 #define BUFFER_SIZE 1024
-
-static int	major_number;
-// static char	device_buffer[BUFFER_SIZE];
 
 static ssize_t read_device(struct file *file, char __user *user_buffer,
                 		size_t size, loff_t *offset)
 {
+	// MODE TODO
 	uint8_t	*data = "psaulnie\n";
 	size_t	len = strlen(data);
-	printk(KERN_INFO "yo\n");
+
+	if (!user_buffer)
+		return (-EINVAL);
+	if (*offset >= 8)
+		return (0);
 	if (size > len)
 		size = len;
 	if (copy_to_user(user_buffer, data, size))
-		return (-1);
+		return (-EFAULT);
 	return (size);
 }
 
 static ssize_t write_device(struct file *filp, const char *buffer,
 						size_t length, loff_t *offset)
 {
-		printk(KERN_INFO "o\n");
+	char	user_data[9];
 
-	return (0);
+	if (length != 9)
+		return (-EINVAL);
+	if (copy_from_user(user_data, buffer, length))
+		return (-EFAULT);
+	else if (memcmp(user_data, "psaulnie", 8))
+		return (-EINVAL);
+	return (length);
 }
 
 static struct file_operations file_ops = {
@@ -44,14 +51,14 @@ static struct miscdevice fortytwo_device = {
 
 static int __init init_ft(void)
 {
-	printk(KERN_INFO "Init module.\n");
-	major_number = misc_register(&fortytwo_device);
-	if (major_number < 0) {
+	int status;
+	
+	status = misc_register(&fortytwo_device);
+	if (status)
 		printk(KERN_ALERT "Error at retrieving the major number.\n");
-		return (major_number);
-	}
-	printk(KERN_INFO "Character device registered.\n");
-	return (0);
+	else
+		printk(KERN_INFO "Character device registered.\n");
+	return (status);
 }
 
 static void __exit cleanup_ft(void)
