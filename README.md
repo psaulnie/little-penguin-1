@@ -3,6 +3,31 @@ The start of a series of challenges inspired by Eudyptula. You will get acquaint
 
 # Task00
 
-Retrieve the latest git tree from www.git.kernel.org, mine was [linux-6.3-rc4.tar.gz](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/snapshot/linux-6.3-rc4.tar.gz).
+Retrieve the latest git tree from www.git.kernel.org, mine was [linux-6.3-rc4](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/snapshot/linux-6.3-rc4.tar.gz).
+
 We compile it, ensuring the CONFIG_LOCALVERSION_AUTO option is enabled and boot with it.
+
 Then, we retrieve the logs by putting the dmesg command's output in a file
+
+# Task01
+
+A linux module code must contains at least two functions:
+  - init_module
+  - cleanup_module
+
+To init the module we execute the insmod command (install module) following the .ko we obtain by compiling our code.
+
+To remove the module we execute the rmmod command (remove module) following the .ko
+
+# Task02
+
+To patch the Makefile :
+```
+cp Makefile Makefile.orig
+vim Makefile # Edit what needs to be patched, here the EXTRAVERSION variable at the beggining
+diff -up Makefile{.orig,} > Makefile.patch
+```
+Then to patch an old Makefile:
+```
+patch Makefile.orig Makefile.patch
+```
