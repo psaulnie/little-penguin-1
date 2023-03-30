@@ -1,7 +1,7 @@
 # little-penguin-1
 The start of a series of challenges inspired by Eudyptula. You will get acquainted with many points of Kernel development.
 
-# Task00
+# Task 00
 
 Retrieve the latest git tree from www.git.kernel.org, mine was [linux-6.3-rc4](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/snapshot/linux-6.3-rc4.tar.gz).
 
@@ -9,7 +9,7 @@ We compile it, ensuring the CONFIG_LOCALVERSION_AUTO option is enabled and boot 
 
 Then, we retrieve the logs by putting the dmesg command's output in a file
 
-# Task01
+# Task 01
 
 A linux module code must contains at least two functions:
   - init_module
@@ -19,7 +19,7 @@ To init the module we execute the insmod command (install module) following the 
 
 To remove the module we execute the rmmod command (remove module) following the .ko
 
-# Task02
+# Task 02
 
 To patch the Makefile :
 ```
@@ -31,3 +31,7 @@ Then to patch an old Makefile:
 ```
 patch Makefile.orig Makefile.patch
 ```
+
+# Task 03
+
+The coding style of the linux kernel can be found [here](https://www.kernel.org/doc/html/v4.10/process/coding-style.html)
