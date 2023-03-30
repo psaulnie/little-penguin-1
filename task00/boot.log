@@ -1,0 +1,179 @@
+Mar 14 16:35:29 +01:00 (none)  Mounting virtual file systems: /run /proc /sys /dev/shm OK
+Mar 14 16:35:29 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 14 16:35:29 +01:00 (none)  Setting hostname to psaulnie... OK
+Mar 14 16:35:29 +01:00 psaulnie  Populating /dev with device nodes...  OK
+Mar 14 16:35:02 +01:00 psaulnie  Activating all swap files/partitions... OK
+Mar 14 16:35:02 +01:00 psaulnie  Mounting root file system in read-only mode...  OK
+Mar 14 16:35:02 +01:00 psaulnie  Checking file systems... OK
+Mar 14 16:35:02 +01:00 psaulnie  Remounting root file system in read-write mode... OK
+Mar 14 16:35:02 +01:00 psaulnie  Mounting remaining file systems... OK
+Mar 14 16:35:02 +01:00 psaulnie  Cleaning file systems: /tmp OK
+Mar 14 16:35:02 +01:00 psaulnie  Retrying failed uevents, if any... OK
+Mar 14 16:35:00 +01:00 psaulnie  Setting up Linux console... OK
+Mar 14 16:35:00 +01:00 psaulnie  Starting system log daemon... OK
+Mar 14 16:35:00 +01:00 psaulnie  Starting kernel log daemon... OK
+Mar 14 16:35:00 +01:00 psaulnie  Bringing up the eth0 interface...Mar 14 16:35:00 +01:00 psaulnie  Interface eth0 doesn't exist. FAIL
+--------
+Mar 15 09:59:41 +01:00 (none)  Mounting virtual file systems: /run /proc /sys /dev/shm OK
+Mar 15 09:59:42 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 15 09:59:42 +01:00 (none)  Setting hostname to psaulnie... OK
+Mar 15 09:59:42 +01:00 psaulnie  Populating /dev with device nodes...  OK
+Mar 15 09:59:36 +01:00 psaulnie  Activating all swap files/partitions... OK
+Mar 15 09:59:36 +01:00 psaulnie  Mounting root file system in read-only mode...  OK
+Mar 15 09:59:36 +01:00 psaulnie  Checking file systems... OK
+Mar 15 09:59:36 +01:00 psaulnie  Remounting root file system in read-write mode... OK
+Mar 15 09:59:36 +01:00 psaulnie  Mounting remaining file systems... OK
+Mar 15 09:59:37 +01:00 psaulnie  Cleaning file systems: /tmp OK
+Mar 15 09:59:37 +01:00 psaulnie  Retrying failed uevents, if any... OK
+Mar 15 09:59:38 +01:00 psaulnie  Setting up Linux console... OK
+Mar 15 09:59:38 +01:00 psaulnie  Starting system log daemon... OK
+Mar 15 09:59:38 +01:00 psaulnie  Starting kernel log daemon... OK
+Mar 15 09:59:38 +01:00 psaulnie  Bringing up the eth0 interface...Mar 15 09:59:38 +01:00 psaulnie  Interface eth0 doesn't exist. FAIL
+--------
+Mar 15 14:38:14 +01:00 (none)  Mounting virtual file systems: /run /proc /sys /dev/shm OK
+Mar 15 14:38:14 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 15 14:38:14 +01:00 (none)  Setting hostname to psaulnie... OK
+Mar 15 14:38:14 +01:00 psaulnie  Populating /dev with device nodes...  OK
+Mar 15 14:38:13 +01:00 psaulnie  Activating all swap files/partitions... OK
+Mar 15 14:38:13 +01:00 psaulnie  Mounting root file system in read-only mode...  OK
+Mar 15 14:38:13 +01:00 psaulnie  Checking file systems... OK
+Mar 15 14:38:13 +01:00 psaulnie  Remounting root file system in read-write mode... OK
+Mar 15 14:38:13 +01:00 psaulnie  Mounting remaining file systems... OK
+Mar 15 14:38:13 +01:00 psaulnie  Cleaning file systems: /tmp OK
+Mar 15 14:38:13 +01:00 psaulnie  Retrying failed uevents, if any... OK
+Mar 15 14:38:14 +01:00 psaulnie  Setting up Linux console... OK
+Mar 15 14:38:14 +01:00 psaulnie  Starting system log daemon... OK
+Mar 15 14:38:14 +01:00 psaulnie  Starting kernel log daemon... OK
+Mar 15 14:38:14 +01:00 psaulnie  Bringing up the eth0 interface...Mar 15 14:38:14 +01:00 psaulnie  Interface eth0 doesn't exist. FAIL
+--------
+Mar 15 14:40:37 +01:00 (none)  Mounting virtual file systems: /run /proc /sys /dev/shm OK
+Mar 15 14:40:37 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 15 14:40:37 +01:00 (none)  Setting hostname to psaulnie... OK
+Mar 15 14:40:37 +01:00 psaulnie  Populating /dev with device nodes...  OK
+Mar 15 14:40:28 +01:00 psaulnie  Activating all swap files/partitions... OK
+Mar 15 14:40:28 +01:00 psaulnie  Mounting root file system in read-only mode...  OK
+Mar 15 14:40:28 +01:00 psaulnie  Checking file systems... OK
+Mar 15 14:40:28 +01:00 psaulnie  Remounting root file system in read-write mode... OK
+Mar 15 14:40:28 +01:00 psaulnie  Mounting remaining file systems... OK
+Mar 15 14:40:28 +01:00 psaulnie  Cleaning file systems: /tmp OK
+Mar 15 14:40:28 +01:00 psaulnie  Retrying failed uevents, if any... OK
+Mar 15 14:40:29 +01:00 psaulnie  Setting up Linux console... OK
+Mar 15 14:40:29 +01:00 psaulnie  Starting system log daemon... OK
+Mar 15 14:40:29 +01:00 psaulnie  Starting kernel log daemon... OK
+Mar 15 14:40:29 +01:00 psaulnie  Bringing up the enp0s3 interface... OK
+Mar 15 14:40:29 +01:00 psaulnie  Adding IPv4 address 10.0.2.15 to the enp0s3 interface... OK
+Mar 15 14:40:29 +01:00 psaulnie  Adding default gateway 10.0.2.2 to the enp0s3 interface... OK
+--------
+Mar 15 14:50:34 +01:00 (none)  Mounting virtual file systems: /run /proc /sys /dev/shm OK
+Mar 15 14:50:34 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 15 14:50:34 +01:00 (none)  Setting hostname to psaulnie... OK
+Mar 15 14:50:34 +01:00 psaulnie  Populating /dev with device nodes...  OK
+Mar 15 14:50:25 +01:00 psaulnie  Activating all swap files/partitions... OK
+Mar 15 14:50:25 +01:00 psaulnie  Mounting root file system in read-only mode...  OK
+Mar 15 14:50:25 +01:00 psaulnie  Checking file systems... OK
+Mar 15 14:50:25 +01:00 psaulnie  Remounting root file system in read-write mode... OK
+Mar 15 14:50:25 +01:00 psaulnie  Mounting remaining file systems... OK
+Mar 15 14:50:25 +01:00 psaulnie  Cleaning file systems: /tmp OK
+Mar 15 14:50:25 +01:00 psaulnie  Retrying failed uevents, if any... OK
+Mar 15 14:50:26 +01:00 psaulnie  Setting up Linux console... OK
+Mar 15 14:50:26 +01:00 psaulnie  Starting system log daemon... OK
+Mar 15 14:50:26 +01:00 psaulnie  Starting kernel log daemon... OK
+Mar 15 14:50:26 +01:00 psaulnie  Bringing up the enp0s3 interface... OK
+Mar 15 14:50:26 +01:00 psaulnie  Adding IPv4 address 10.0.2.15 to the enp0s3 interface... OK
+Mar 15 14:50:26 +01:00 psaulnie  Adding default gateway 10.0.2.2 to the enp0s3 interface... OK
+--------
+Mar 15 15:06:32 +01:00 (none)  Mounting virtual file systems: /run /proc /sys /dev/shm OK
+Mar 15 15:06:32 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 15 15:06:32 +01:00 (none)  Setting hostname to psaulnie... OK
+Mar 15 15:06:32 +01:00 psaulnie  Populating /dev with device nodes...  OK
+Mar 15 15:06:22 +01:00 psaulnie  Activating all swap files/partitions... OK
+Mar 15 15:06:22 +01:00 psaulnie  Mounting root file system in read-only mode...  OK
+Mar 15 15:06:22 +01:00 psaulnie  Checking file systems... OK
+Mar 15 15:06:22 +01:00 psaulnie  Remounting root file system in read-write mode... OK
+Mar 15 15:06:22 +01:00 psaulnie  Mounting remaining file systems... OK
+Mar 15 15:06:22 +01:00 psaulnie  Cleaning file systems: /tmp OK
+Mar 15 15:06:22 +01:00 psaulnie  Retrying failed uevents, if any... OK
+Mar 15 15:06:23 +01:00 psaulnie  Setting up Linux console... OK
+Mar 15 15:06:23 +01:00 psaulnie  Starting system log daemon... OK
+Mar 15 15:06:23 +01:00 psaulnie  Starting kernel log daemon... OK
+Mar 15 15:06:23 +01:00 psaulnie  Bringing up the enp0s3 interface... OK
+Mar 15 15:06:23 +01:00 psaulnie  Adding IPv4 address 10.0.2.15 to the enp0s3 interface... OK
+Mar 15 15:06:23 +01:00 psaulnie  Adding default gateway 10.0.2.2 to the enp0s3 interface... OK
+Mar 15 15:06:23 +01:00 psaulnie  Starting SSH Server... OK
+--------
+Mar 15 16:26:51 +01:00 (none)  Mounting virtual file systems: /run /proc /sys /dev/shm OK
+Mar 15 16:26:51 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 15 16:26:51 +01:00 (none)  Setting hostname to psaulnie... OK
+Mar 15 16:26:51 +01:00 psaulnie  Populating /dev with device nodes...  OK
+Mar 15 15:47:32 +01:00 psaulnie  Activating all swap files/partitions... OK
+Mar 15 15:47:32 +01:00 psaulnie  Mounting root file system in read-only mode...  OK
+Mar 15 15:47:32 +01:00 psaulnie  Checking file systems... OK
+Mar 15 15:47:32 +01:00 psaulnie  Remounting root file system in read-write mode... OK
+Mar 15 15:47:32 +01:00 psaulnie  Mounting remaining file systems... OK
+Mar 15 15:47:32 +01:00 psaulnie  Cleaning file systems: /tmp OK
+Mar 15 15:47:32 +01:00 psaulnie  Retrying failed uevents, if any... OK
+Mar 15 15:47:33 +01:00 psaulnie  Setting up Linux console... OK
+Mar 15 15:47:33 +01:00 psaulnie  Starting system log daemon... OK
+Mar 15 15:47:33 +01:00 psaulnie  Starting kernel log daemon... OK
+Mar 15 15:47:33 +01:00 psaulnie  Bringing up the enp0s3 interface... OK
+Mar 15 15:47:33 +01:00 psaulnie  Adding IPv4 address 10.0.2.15 to the enp0s3 interface... OK
+Mar 15 15:47:33 +01:00 psaulnie  Adding default gateway 10.0.2.2 to the enp0s3 interface... OK
+Mar 15 15:47:33 +01:00 psaulnie  Starting SSH Server... OK
+--------
+Mar 16 10:50:53 +01:00 (none)  Mounting virtual file systems: /run /dev/shm OK
+Mar 16 10:50:53 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 16 10:50:53 +01:00 (none)  Setting hostname to psaulnie... OK
+Mar 16 10:50:53 +01:00 psaulnie  Populating /dev with device nodes...  OK
+Mar 15 15:55:12 +01:00 psaulnie  Activating all swap files/partitions... OK
+Mar 15 15:55:12 +01:00 psaulnie  Mounting root file system in read-only mode...  OK
+Mar 15 15:55:12 +01:00 psaulnie  Checking file systems... OK
+Mar 15 15:55:12 +01:00 psaulnie  Remounting root file system in read-write mode... OK
+Mar 15 15:55:12 +01:00 psaulnie  Mounting remaining file systems... OK
+Mar 15 15:55:12 +01:00 psaulnie  Cleaning file systems: /tmp OK
+Mar 15 15:55:12 +01:00 psaulnie  Retrying failed uevents, if any... OK
+Mar 15 15:55:13 +01:00 psaulnie  Setting up Linux console... OK
+Mar 15 15:55:13 +01:00 psaulnie  Starting system log daemon... OK
+Mar 15 15:55:13 +01:00 psaulnie  Starting kernel log daemon... OK
+Mar 15 15:55:13 +01:00 psaulnie  Bringing up the enp0s3 interface... OK
+Mar 15 15:55:13 +01:00 psaulnie  Adding IPv4 address 10.0.2.15 to the enp0s3 interface... OK
+Mar 15 15:55:13 +01:00 psaulnie  Adding default gateway 10.0.2.2 to the enp0s3 interface... OK
+Mar 15 15:55:13 +01:00 psaulnie  Starting SSH Server... OK
+--------
+Mar 30 10:11:35 +02:00 (none)  Mounting virtual file systems: /run /dev/shm OK
+Mar 30 10:11:35 +02:00 (none)  Bringing up the loopback interface... OK
+Mar 30 10:11:35 +02:00 (none)  Setting hostname to psaulnie... OK
+Mar 30 10:11:35 +02:00 psaulnie  Populating /dev with device nodes...  OK
+Mar 30 10:11:34 +02:00 psaulnie  Activating all swap files/partitions... OK
+Mar 30 10:11:34 +02:00 psaulnie  Mounting root file system in read-only mode...  OK
+Mar 30 10:11:34 +02:00 psaulnie  Checking file systems... OK
+Mar 30 10:11:34 +02:00 psaulnie  Remounting root file system in read-write mode... OK
+Mar 30 10:11:34 +02:00 psaulnie  Mounting remaining file systems... OK
+Mar 30 10:11:34 +02:00 psaulnie  Cleaning file systems: /tmp OK
+Mar 30 10:11:34 +02:00 psaulnie  Retrying failed uevents, if any... OK
+Mar 30 10:11:35 +02:00 psaulnie  Setting up Linux console... OK
+Mar 30 10:11:35 +02:00 psaulnie  Starting system log daemon... OK
+Mar 30 10:11:35 +02:00 psaulnie  Starting kernel log daemon... OK
+Mar 30 10:11:35 +02:00 psaulnie  Bringing up the enp0s3 interface... OK
+Mar 30 10:11:35 +02:00 psaulnie  Adding IPv4 address 10.0.2.15 to the enp0s3 interface... OK
+Mar 30 10:11:35 +02:00 psaulnie  Adding default gateway 10.0.2.2 to the enp0s3 interface... OK
+Mar 30 10:11:35 +02:00 psaulnie  Starting SSH Server... OK
+--------
+Mar 30 11:15:11 +02:00 (none)  Mounting virtual file systems: /run /dev/shm OK
+Mar 30 11:15:11 +02:00 (none)  Bringing up the loopback interface... OK
+Mar 30 11:15:11 +02:00 (none)  Setting hostname to psaulnie... OK
+Mar 30 11:15:11 +02:00 psaulnie  Populating /dev with device nodes...  OK
+Mar 30 11:13:57 +02:00 psaulnie  Activating all swap files/partitions... OK
+Mar 30 11:13:57 +02:00 psaulnie  Mounting root file system in read-only mode...  OK
+Mar 30 11:13:57 +02:00 psaulnie  Checking file systems... OK
+Mar 30 11:13:57 +02:00 psaulnie  Remounting root file system in read-write mode... OK
+Mar 30 11:13:57 +02:00 psaulnie  Mounting remaining file systems... OK
+Mar 30 11:13:57 +02:00 psaulnie  Cleaning file systems: /tmp OK
+Mar 30 11:13:57 +02:00 psaulnie  Retrying failed uevents, if any... OK
+Mar 30 11:13:58 +02:00 psaulnie  Setting up Linux console... OK
+Mar 30 11:13:58 +02:00 psaulnie  Starting system log daemon... OK
+Mar 30 11:13:58 +02:00 psaulnie  Starting kernel log daemon... OK
+Mar 30 11:13:58 +02:00 psaulnie  Bringing up the enp0s3 interface... OK
+Mar 30 11:13:58 +02:00 psaulnie  Adding IPv4 address 10.0.2.15 to the enp0s3 interface... OK
+Mar 30 11:13:58 +02:00 psaulnie  Adding default gateway 10.0.2.2 to the enp0s3 interface... OK
+Mar 30 11:13:58 +02:00 psaulnie  Starting SSH Server... OK
+--------
