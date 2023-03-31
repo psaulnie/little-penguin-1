@@ -35,3 +35,9 @@ patch Makefile.orig Makefile.patch
 # Task 03
 
 The coding style of the linux kernel can be found [here](https://www.kernel.org/doc/html/v4.10/process/coding-style.html)
+
+# Task 04
+
+We need to add a rule in /etc/udev/rules.d/
+
+ATTR{bInterfaceProtocol}=="01" represents a keyboard, if we write "02", it will be mouses.
