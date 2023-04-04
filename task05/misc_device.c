@@ -9,7 +9,6 @@
 static ssize_t read_device(struct file *file, char __user *user_buffer,
                 		size_t size, loff_t *offset)
 {
-	// MODE TODO
 	uint8_t	*data = "psaulnie\n";
 	size_t	len = strlen(data);
 
