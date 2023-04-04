@@ -40,4 +40,30 @@ The coding style of the linux kernel can be found [here](https://www.kernel.org/
 
 We need to add a rule in /etc/udev/rules.d/
 
-ATTR{bInterfaceProtocol}=="01" represents a keyboard, if we write "02", it will be mouses.
+`ATTR{bInterfaceProtocol}=="01"` represents a keyboard, if we write "02", it will be a mouse.
+
+# Task 05
+
+To make a misc character device, we need to use the `misc_register()` function with two structs:
+
+```
+static struct file_operations file_ops = {
+	.read = read_device,
+	.write = write_device,
+};
+
+static struct miscdevice fortytwo_device = {
+    .minor = MISC_DYNAMIC_MINOR,
+    .name = "fortytwo",
+    .fops = &file_ops
+};
+```
+It will create a device file in /dev named fortytwo.
+
+To read from, we use in the `read_device()` function : `copy_to_user()`.
+
+To write to, we use in the `write_device()` function : `copy_from_user()`.
+
+# Task 06
+
+No difficulties for this task, just download the most recent [linux-next source code](https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/).
