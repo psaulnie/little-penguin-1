@@ -69,3 +69,14 @@ Don't forget to unregister your device when using rmmod by putting the function 
 # Task 06
 
 No difficulties for this task, just download the most recent [linux-next source code](https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/).
+
+# Task 07
+
+To create a directory in /sys/kernel/debug we first need to mount debugfs using this command:
+```
+
+```
+Then, to create a subdirectory in it, we use this command:
+```
+struct dentry *debugfs_create_dir(const char *name, struct dentry *parent);
+```
