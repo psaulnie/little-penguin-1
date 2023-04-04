@@ -64,6 +64,8 @@ To read from, we use in the `read_device()` function : `copy_to_user()`.
 
 To write to, we use in the `write_device()` function : `copy_from_user()`.
 
+Don't forget to unregister your device when using rmmod by putting the function `misc_deregister()` in the module exit function.
+
 # Task 06
 
 No difficulties for this task, just download the most recent [linux-next source code](https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/).
