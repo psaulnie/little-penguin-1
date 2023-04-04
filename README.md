@@ -74,7 +74,7 @@ No difficulties for this task, just download the most recent [linux-next source 
 
 To create a directory in /sys/kernel/debug we first need to mount debugfs using this command:
 ```
-
+mount -t debugfs none /sys/kernel/debug/
 ```
 Then, to create a subdirectory in it, we use this command:
 ```
