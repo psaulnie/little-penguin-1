@@ -4,8 +4,6 @@
 #include <linux/init.h>
 #include <linux/miscdevice.h>
 
-#define BUFFER_SIZE 1024
-
 static ssize_t read_device(struct file *file, char __user *user_buffer,
                 		size_t size, loff_t *offset)
 {
