@@ -44,15 +44,15 @@ static ssize_t write_foo(struct file *filp, const char *buffer,
 {
 	mutex_lock(&mutex);
 	if (length > PAGE_SIZE) {
-		mutex_unlock(&unlock);
+		mutex_unlock(&mutex);
 		return (-EOVERFLOW);
 	}
 	memset(foo_buffer, 0, PAGE_SIZE);
 	if (copy_from_user(foo_buffer, buffer, length)) {
-		mutex_unlock(&unlock);
+		mutex_unlock(&mutex);
 		return (-EFAULT);
 	}
-	mutex_unlock(&unlock);
+	mutex_unlock(&mutex);
 	return (length);
 }
 
