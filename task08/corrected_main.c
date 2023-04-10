@@ -28,7 +28,7 @@ static struct miscdevice	myfd_device = {
 };
 
 static char str[PAGE_SIZE * 2];
-·
+
 static int __init	myfd_init(void)
 {
 	misc_register(&myfd_device);
@@ -48,9 +48,8 @@ ssize_t	myfd_read(struct file *fp, char __user *user, size_t size,
 	char 	*tmp;
 
 	tmp = kmalloc(sizeof(char) * PAGE_SIZE * 2, GFP_KERNEL);
-	for (t = strlen(str) - 1, i = 0; t >= 0; t--, i++) {
+	for (t = strlen(str) - 1, i = 0; t >= 0; t--, i++)
 		tmp[i] = str[t];
-	}
 	tmp[i] = 0x0;
 	status = simple_read_from_buffer(user, size, offs, tmp, i);
 	kfree(tmp);
@@ -63,7 +62,7 @@ ssize_t	myfd_write(struct file *fp, const char __user *user, size_t size,
 {
 	ssize_t res;
 
-	res = simple_write_to_buffer(str, size, offs, user, size);
+	res = simple_write_to_buffer(str, ARRAY_SIZE(str) - 1, offs, user, size);
 	if (res >= 0)
 		str[res] = 0x0;
 	return res;
