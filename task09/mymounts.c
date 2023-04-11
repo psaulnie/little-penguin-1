@@ -6,76 +6,31 @@
 #include <linux/list.h>  
 #include <linux/fs_struct.h>
 #include <linux/slab.h>
+#include <linux/seq_file.h>
 #include <asm/current.h>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 
 static struct proc_dir_entry *ent;
 
-// &current pointer represents the current process
-static char	*get_data(void)
+static int show_mymounts(struct seq_file* m, void* v)
 {
-	char			*data;
-	char			*buf = kmalloc(1000, GFP_KERNEL);
-	char			*path;
-	struct dentry	*curdentry;
-	int				first = 1;
-	int				pos = 0;
+	struct mount *mnt;
 
-	list_for_each_entry(curdentry, &current->fs->root.mnt->mnt_root->d_subdirs, d_child) {
-		if (curdentry->d_flags & DCACHE_MOUNTED) {
-			path = dentry_path_raw(curdentry, buf, 1000);
-			if (!path) {
-				if (!first)
-					kfree(data);
-				return (NULL);
-			}
-			if (first) {
-				data = kmalloc(strlen(curdentry->d_name.name) * sizeof(char)
-							+ strlen(path) * sizeof(char) + 9, GFP_KERNEL);
-				first = 0;
-			}
-			else
-				data = krealloc(data, strlen(curdentry->d_name.name)
-							* sizeof(char) + strlen(path)
-							* sizeof(char) + 9, GFP_KERNEL);
-			if (!data) {
-				kfree(buf);
-				return (NULL);
-			}
-			memcpy(&data[pos], curdentry->d_name.name, strlen(curdentry->d_name.name));
-			pos += strlen(curdentry->d_name.name);
-			memcpy(&data[pos], "        ", 8);
-			pos += 8;
-			memcpy(&data[pos], path, strlen(path));
-			pos += strlen(path);
-			memcpy(&data[pos], "\n", 1);
-			pos++;
-		}
-	}
-	data = krealloc(data, strlen(curdentry->d_name.name) * sizeof(char) + 9, GFP_KERNEL);
-	kfree(buf);
-	return (data);
+	// list_for_each_entry(mnt, &current->nsproxy->)
+	seq_putc(m, 'c');
+	seq_putc(m, '\n');
+	return (0);
 }
 
-static ssize_t read_device(struct file *file, char __user *user_buffer,
-                		size_t size, loff_t *offset)
+static int open_procfile(struct inode* inode, struct file* file)
 {
-	char	*data = get_data();
-	int		len = strlen(data);
-
-	if (!user_buffer)
-		return (-EINVAL);
-	if (*offset >= 8)
-		return (0);
-	if (size > len)
-		size = len;
-	if (copy_to_user(user_buffer, data, size))
-		return (-EFAULT);
-	kfree(data);
-	return (size);
+    return single_open(file, show_mymounts, NULL);
 }
 
 static struct proc_ops file_ops = {
-	.proc_read = read_device,
+	.proc_open = open_procfile,
+	.proc_read = seq_read,
+	.proc_lseek = seq_lseek,
+	.proc_release = single_release
 };
 
 static int __init init_ft(void)
