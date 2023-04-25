@@ -43,7 +43,7 @@ static void __exit	myfd_cleanup(void)
 ssize_t	myfd_read(struct file *fp, char __user *user, size_t size,
 				loff_t *offs)
 {
-	size_t	t, i;
+	int		t, i;
 	int		status;
 	char 	*tmp;
 

@@ -1,13 +1,16 @@
-#include <linux/module.h>
-#include <linux/kernel.h>
-#include <linux/fs.h>
 #include <linux/init.h>
+#include <linux/kernel.h>
+#include <linux/module.h>
+#include <linux/fs.h>
+#include <linux/mount.h>
 #include <linux/proc_fs.h>
-#include <linux/list.h>  
-#include <linux/fs_struct.h>
-#include <linux/slab.h>
 #include <linux/seq_file.h>
-#include <asm/current.h>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+#include <linux/spinlock.h>
+#include <linux/nsproxy.h>
+#include <linux/ns_common.h>
+#include <linux/poll.h>
+#include <linux/mnt_namespace.h>
+#include <../fs/mount.h>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 
 static struct proc_dir_entry *ent;
 
@@ -15,9 +18,20 @@ static int show_mymounts(struct seq_file* m, void* v)
 {
 	struct mount *mnt;
 
-	// list_for_each_entry(mnt, &current->nsproxy->)
-	seq_putc(m, 'c');
-	seq_putc(m, '\n');
+	list_for_each_entry(mnt, &current->nsproxy->mnt_ns->list, mnt_list) {
+		struct path			mnt_path = { .dentry = mnt->mnt.mnt_root, .mnt = &mnt->mnt};
+		struct super_block	*sb = mnt_path.dentry->d_sb;
+
+		if (!strcmp(mnt->mnt_devname, "rootfs"))
+			continue ;
+		if (sb->s_op->show_devname)
+			sb->s_op->show_devname(m, mnt_path.dentry);
+		else if (mnt->mnt_devname)
+	    	seq_puts(m, mnt->mnt_devname);
+	    seq_putc(m, ' ');
+       	seq_path(m, &mnt_path, " \t\n\\");
+        seq_putc(m, '\n');
+	}
 	return (0);
 }
 
