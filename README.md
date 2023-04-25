@@ -80,3 +80,22 @@ Then, to create a subdirectory in it, we use this command:
 ```
 struct dentry *debugfs_create_dir(const char *name, struct dentry *parent);
 ```
+
+# Task 08
+
+The working code will write in reverse the text wrote in the buffer:
+
+```
+$> echo "Hello World!" > /dev/reverse
+$> cat /dev/reverse
+
+!dlroW olleH
+```
+
+# Task 09
+
+To create a proc file, we use the `proc_create()` function and the proc_ops file structure.
+
+You need to loop through all the mounted points using the `list_for_each_entry()` loop.
+
+Then, using the `seq_putc()`, `seq_puts()` and `seq_path()` functions, you can write in the buffer of the proc file.
